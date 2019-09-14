@@ -1,0 +1,4 @@
+echo "Enter the number"
+read a b
+sum=$((a+b)) 
+echo "sum=$sum"

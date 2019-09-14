@@ -1,0 +1,21 @@
+echo "Enter 10 numbers"
+declare -a arr
+read -a arr
+for i in {0..8}
+do
+	stlim=$((i+1))
+	for (( j=$stlim; j<=9; j++ ))
+	do
+		if [ ${arr[i]} -gt ${arr[j]} ]
+		then
+			temp=${arr[j]}
+			arr[j]=${arr[i]}
+			arr[i]=$temp
+		fi
+	done
+done
+echo "Sorted array"
+for i in ${arr[@]}
+do 
+	echo "$i"
+done
